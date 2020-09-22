@@ -1,0 +1,203 @@
+
+html {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+  font-size: 15px;
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*,*::after,*::before{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+/*------nav---- */
+.nav {
+  text-align: right;
+}
+.button-bar {
+  /*去掉边线*/
+  border: none;
+  background-color: #fff;
+  /*这个是上下边距*/
+  padding: 5px 10px;G
+  /*像素大小*/
+  font-size: 26px;
+
+  display: inline-block;
+  /*剧中*/
+  text-align: center;
+  /*外边线去掉*/
+  outline: none;
+  cursor: pointer
+}
+.button-bar:hover {
+  background-color: #ddd;
+}
+
+
+.header {
+  padding: 34px 0;
+  text-align: center;
+  /*透明度*/
+  opacity: 0.7;
+}
+.header h1 {
+  letter-spacing: 2px;
+}
+
+
+.button {
+  border:none;
+  padding: 10px 16px;
+  background-color: #525050;
+  color: #fff;
+  /*字体大小*/
+  font-size: 15px;
+  display:inline-block;
+  margin-top: 15px;
+  display: inline-block;
+  cursor: pointer;
+  outline:none;
+}
+.button:hover {
+  background-color: #000102;
+  color: #e6e4e4;
+}
+
+.container::after{
+  content: "";
+  clear:both;
+  display: table;
+}
+
+.column {
+  float: left;
+  width: 33.33333%;
+
+}
+img {
+  width: 100%;
+  /*高度自适应*/
+  height: auto;
+  /*图片间距压缩了一下*/
+  margin-bottom:-5px;
+}
+.fotter{
+  background-color: #f1f1f1;
+  /* 上下左右间隔 */
+  padding: 64px 0;
+  /* 居中 */
+  text-align: center;
+  /* 透明度 */
+  opacity: 0.7;
+  margin-top: 64px;
+}
+.iconbar{
+  /* 图标大小 */
+  font-size: 20px;
+}
+.iconbar i{
+  padding: 2px;
+  /* 鼠标放上去是手的形状 */
+  cursor: pointer;
+}
+
+.iconbar i:hover {
+  opacity: 0.7;
+}
+.fotter a{
+  color: black;
+}
+
+/* 响应式 */
+
+/* 媒体查询 */
+/* 仅仅查询屏幕,当屏幕的最大宽度不超过600px的时候,进行响应 */
+@media only screen and (max-width:600px) {
+  .column {
+    width:100%;
+  }
+}
+.nav-modal {
+  background-color: black;
+  position:fixed;
+  top: 0 ;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 层级数字关系 */
+  /* 数字越大放在最上层 */
+  z-index: 1;
+  display: none;
+}
+
+.button-close {
+  /* 没有边线 */
+  border: none;
+  background-color: black;
+  color: #fff;
+  float: right;
+  font-size: 26px;
+  padding: 5px,10px;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+.button-close:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+.nav-modal ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  /* 指定位置 */
+  position: absolute;
+  top:30%;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+.nav-modal li a {
+  display: block;
+  font-size: 30px;
+  padding: 12px 0;
+  color:#abaaab;
+  /* 去掉下划线 */
+  text-decoration: none;
+  text-align: center;
+}
+.nav-modal li a:hover {
+    color: #f1ebee;
+}
+.animation-top {
+  animation: animationtop 0.4s;
+}
+/* 关键帧 */
+@keyframes animationtop {
+  from {
+    top:-600px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+
+}
+
+.space {
+padding:0 8px;
+}
+.space img {
+  margin-bottom: 8px;
+}
+.space .column {
+  padding:0 8px;
+}

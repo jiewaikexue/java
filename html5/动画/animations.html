@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style media="screen">
+    .animation-top {
+      position: relative;
+      /* 关键帧名字:top */
+      /* 帧时长0.6s */
+      animation: animation-top 1s;
+    }
+
+    @keyframes animation-top {
+      from {
+        top: -600px;
+        opacity: 0;
+      }
+
+      to {
+        top: 0;
+        opacity: 0.7;
+        color: blue;
+      }
+    }
+
+    .animation-bottom {
+      position: relative;
+      /* 关键帧名字:top */
+      /* 帧时长0.6s */
+      animation: animation-bottom 1s;
+    }
+
+    @keyframes animation-bottom {
+      from {
+        bottom: -600px;
+        opacity: 0;
+      }
+
+      to {
+        bottom: 0;
+        opacity: 0.7;
+        color: blue;
+      }
+    }
+
+    .animation-left {
+      position: relative;
+      /* 关键帧名字:top */
+      /* 帧时长0.6s */
+      /* 意思也就是,你用哪个关键帧 关键帧时长是多少 */
+      animation: animation-left 1s;
+    }
+
+    /* 关键帧 */
+    @keyframes animation-left {
+      from {
+        left: -600px;
+        opacity: 0;
+      }
+
+      to {
+        left: 0;
+        opacity: 0.7;
+        color: blue;
+      }
+    }
+
+    .animation-right {
+      position: relative;
+      /* 关键帧名字:top */
+      /* 帧时长0.6s */
+      animation: animation-right 1s;
+    }
+
+    @keyframes animation-right {
+      from {
+        right: -600px;
+        opacity: 0;
+      }
+
+      to {
+        right: 0;
+        opacity: 0.7;
+        color: blue;
+      }
+    }
+
+
+    /* 以上是上下左右滑动动画 */
+
+
+
+
+    /* 渐变式动画 */
+    .animation-change {
+      position: relative;
+      -web-animation: animation-zhuanquan 4s infinite linear;
+      animation: animation-zhuanquan 4s infinite linear;
+    }
+
+    @keyframes animation-change {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* 中间状态动画 */
+    .animation-change2 {
+      position: relative;
+      -web-animation: animation-change2 4s infinite;
+      animation: animation-change2 1s infinite;
+      /* infinite每隔多少秒执行一次动画 */
+    }
+
+    @keyframes animation-change2 {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+
+      /* 还可以使用百分比划分多个状态 */
+    }
+
+    .animation-change3 {
+      position: relative;
+      -web-animation: animation-change3 4s infinite;
+      animation: animation-change3 5s infinite;
+      /* infinite每隔多少秒执行一次动画 */
+    }
+
+    @keyframes animation-change3 {
+      0% {
+        opacity: 0;
+      }
+
+      30% {
+        opacity: 0.5;
+      }
+
+      60% {
+        opacity: 0.5;
+      }
+
+      90% {
+        opacity: 0.5;
+      }
+
+      /* 还可以使用百分比划分多个状态 */
+    }
+
+
+
+
+
+
+
+
+    /* 旋转图片 */
+
+    .animation-zhuanquan {
+      position: relative;
+      -web-animation: animation-zhuanquan 2s infinite linear;
+      animation: animation-zhuanquan 2s infinite linear;
+      /* infinite每隔多少秒执行一次动画 */
+    }
+
+    @keyframes animation-zhuanquan {
+      from {
+        /* 开始时的角度 */
+        transform: rotate(0deg);
+      }
+
+      to {
+        /* 结束时的角度 */
+        transform: rotate(359deg);
+      }
+
+      /* 还可以使用百分比划分多个状态 */
+    }
+
+
+
+
+    /* 缩放 */
+
+        .animation-suofang {
+          position: relative;
+          -web-animation: animation-suofang 3s infinite linear;
+          animation: animation-suofang 3s infinite linear;
+          /* 可以使用多个动画 */
+          /* infinite每隔多少秒执行一次动画 */
+        }
+
+        @keyframes animation-suofang {
+          from {
+            /* 最初的大小是0 */
+            transform: scale(0);
+          }
+
+          to {
+            /* 最后的大小是原来的1:1 */
+            transform: scale(1);
+          }
+
+          /* 还可以使用百分比划分多个状态 */
+        }
+
+
+  </style>
+</head>
+
+<body>
+  <h1 class="animation-top">animation top</h1>
+  <h1 class="animation-left">animation left</h1>
+  <h1 class="animation-bottom">animation bottom</h1>
+  <h1 class="animation-right">animation right</h1>
+  <img class="animation-change" src="https://unsplash.it/200/200?image=1070" alt="">
+  <img class="animation-change2" src="https://unsplash.it/200/200?image=1067" alt="">
+  <img class="animation-change3" src="https://unsplash.it/200/200?image=1079" alt="">
+  <span> <i class="fa fa-spinner animation-zhuanquan" style="font-size:60px;"></i> </span>
+    <img class="animation-suofang" src="https://unsplash.it/200/200?image=1044" alt="">
+</body>
+
+</html>

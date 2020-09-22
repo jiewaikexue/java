@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>button</title>
+<style media="screen">
+  .button {
+    display:inline-block;
+    border:none;
+    background-color:#333;
+    color:#fff;
+    padding:20px 20px;
+  }/* 按钮样式,边线美化 */
+  .radius {
+    /* 圆弧 */
+    border-radius:40%;
+  }
+  /* 阴影 */
+  .shadow {
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2)
+  }
+  /* 边线*/
+  .border {
+    border:2px solid red;
+    background-color:transparent;
+    color:#333;
+    border-radius:20%;
+  }
+  /* button组 */
+  .hover {
+    transition: all 0.5s;
+  }
+  .hover:hover {
+    background-color:#fff;
+    color:black;
+  border:2px solid red;
+  }
+</style>
+  </head>
+  <body>
+    <button class="button">button</button>
+    <button class="button radius">button</button>
+    <button class="button">button</button>
+    <button class="button">button</button>
+    <button class="button shadow">button</button>
+    <button class="button border">button</button>
+    <button class="button hover">button</button>
+    <!-- <input type="text" name="" value=""> -->
+    <!-- <a href="#"></a>   -->
+  </body>
+</html>

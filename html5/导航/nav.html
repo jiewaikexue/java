@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>navigation导航</title>
+    <style media="screen">
+      html {
+        font-size:30px;
+        font-family:sans-serif;
+      }
+    .nav {
+      list-style-type:none;
+      padding:0;
+      margin:0;
+      background-color:#f1f1f1;
+      width:160px;
+      /* 防止里面的元素溢出 */
+      overflow:hidden;
+      box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+    .nav li a {
+      display:block;
+      color:#000;
+      text-decoration:none;
+      padding:14px 16px;
+    }
+    .nav li a:hover {
+      background-color:#999;
+    }
+    .nav li a.active {
+      background-color:#a62d2d;
+      color:#fff;
+    }
+
+
+
+
+
+    .nav-h {
+      list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color:#444;
+    overflow: hidden;
+    }
+    .nav-h li {
+      float:left;
+    }
+    .nav-h li a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 16px;
+      text-align: center;
+    }
+    .nav-h li a:hover {
+      background-color: #000;
+    }
+    .nav-h li a.active {
+      background-color: #a62d2d;
+      color: #eae9e7;
+    }
+
+    .nav-h li.right {
+    float: right;
+    }
+
+
+
+
+
+
+
+    .nav-more {
+      list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color:#444;
+    overflow: hidden;
+    }
+    .nav-more li {
+      float:left;
+    }
+    .nav-more li a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 16px;
+      text-align: center;
+      border-right: 1px solid #999;
+    }
+    .nav-more li:last-child {
+      border-right:none ;
+    }
+    .nav-more li a:hover {
+      background-color: #000;
+    }
+    .nav-more li a.active {
+      background-color: #d;
+      color: #eae9e7;
+    }
+
+    .nav-more li.right {
+    float: right;
+    }
+    .dropdown {
+      float: left;
+    }
+    .dropdown-content {
+      background-color:#777;
+      display: none;
+      position: absolute;
+      min-width: 150px;
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.7);
+    }
+    .dropdown:hover .dropdown-content {
+    display: block;
+    }
+    </style>
+
+  </head>
+  <body>
+
+    <ul class="nav">
+      <li><a href="#">首页</a></li>
+      <li><a  class="active" href="#">作品</a></li>
+      <li><a href="#">商城</a></li>
+      <li><a href="#">关于</a></li>
+    </ul>
+    <br>
+    <ul class="nav-h">
+      <li><a href="#">首页</a></li>
+      <li><a  class="active" href="#">作品</a></li>
+      <li><a href="#">商城</a></li>
+      <li class="right"><a href="#">关于</a></li>
+    </ul>
+
+<br><br><br>
+    <ul class="nav-more">
+      <li><a href="#">首页</a></li>
+      <li><a  class="active" href="#">作品</a></li>
+      <li><a href="#">商城</a></li>
+      <li class="dropdown">
+        <a href="#">more</a>
+        <div class="dropdown-content">
+          <a href="#">色图</a>
+          <a href="#">色图</a>
+          <a href="#">色图</a>
+          <a href="#">色图</a>
+
+        </div>
+      </li>
+
+      <li class="right"><a href="#">关于</a></li>
+    </ul>
+    <br>
+  </body>
+</html>
